@@ -1,0 +1,56 @@
+﻿
+@model CroudeDemoMvc.Models.Employee
+<h2> Creat Account</h2>
+<table border="1">
+    @using (Html.BeginForm("Save", "Employee", FormMethod.Post))
+    {
+        @Html.HiddenFor(s => s.Id)
+        <tr>
+            <td> @Html.LabelFor(s => s.Name)</td>
+            <td> @Html.TextBoxFor(s => s.Name, new {  required = true })</td>
+            <td> @Html.ValidationMessageFor(s => s.Name)</td>
+
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(s => s.Email)</td>
+            <td>@Html.TextBoxFor(s => s.Email, new { required = true })</td>
+            <td>@Html.ValidationMessageFor(s => s.Email)</td>
+        </tr>
+       @*  <tr>
+            <td> @Html.LabelFor(s => s.Address)</td>
+            <td> @Html.TextBoxFor(s => s.Address)</td>
+            <td> @Html.ValidationMessageFor(s => s.Address)</td>
+        </tr> *@
+        <tr>
+            <td>@Html.LabelFor(s => s.City)</td>
+            <td>@Html.DropDownListFor(s => s.City, new SelectList(Enum.GetValues(typeof(CroudeDemoMvc.Models.City))), "Select City")</td>
+            <td>@Html.ValidationMessageFor(s => s.City)</td>
+        </tr>
+        @* <tr>
+            <td>@Html.LabelFor(s => s.Gender)</td>
+            <td>@Html.RadioButtonFor(c => c.Gender, "Male")Male|@Html.RadioButtonFor(s => s.Gender, "Female")Female </td>
+            <td>@Html.ValidationMessageFor(c => c.Gender)</td>
+        </tr> *@
+        <tr>
+            <td>@Html.LabelFor(s => s.password)</td>
+            <td>@Html.TextBoxFor(s => s.password, new { required = true })</td>
+            @*  <td> @Html.TextBoxFor(s => s.password)</td> *@
+            <td> @Html.ValidationMessageFor(s => s.password)</td>
+        </tr>
+        @* <tr>
+            <td>@Html.LabelFor(s => s.IsSelected) </td>  
+            <td>@Html.CheckBox("teams & conditions")</td>
+        </tr> *@
+        <tr>
+            <td>
+
+                <input type="submit" value="Save" name="submit" class="btn btn-outline-success" />
+            </td>
+        </tr>
+
+    }
+    
+
+
+@*     api key   @*  AIzaSyDPwkAHh5O_1gA1ZJ61nVU6Pmpfzcjyfkc *@
+ 

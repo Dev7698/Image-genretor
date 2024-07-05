@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Image Search";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@* <form method="get" asp-action="Index" asp-controller="Image">
+    <div class="form-group">
+        <label for="name">Search Image by Name:</label>
+        <input type="text" id="name" name="name" class="form-control" />
+    </div>
+    <button type="submit"  class="btn btn-primary">Search</button>
+
+</form>  *@
+<form asp-action="Index" method="GET">
+    <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Search..." />
+        <input type="submit" class="btn btn-primary" value="Search" />
+    </div>
+</form>
+
+<div>
+    @Html.Raw(TempData["BodyContent"])
+</div>
+<td>
+    <a href="/Employee/Manage?id=@Html.Id">
+        <input type="button" value="sing up" name="sing up" style="background-color: bisque" />
+    </a>
+    
+</td>
+
+<table>

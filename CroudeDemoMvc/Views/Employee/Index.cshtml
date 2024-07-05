@@ -1,0 +1,28 @@
+﻿@model List<CroudeDemoMvc.Models.Employee>
+<h2> Index</h2>
+<table border="1">
+    <tr>
+        <th colspan="6" style="text-align:right"><a href="/Employee/Manage?id=0">AddNew</a></th>
+
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Address</td>
+        <td>City</td>
+        <td>Gender</td>
+        <td>IsSelected</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Address</td>
+            <td>@item.City</td>
+            <td>@item.IsSelected</td>
+            <td> <a href="/Employee/Manage?id=@item.Id">Edit</a>|<a href="/Employee/Delete?id=@item.Id" onclick="return confirm('r u  delete ')">Delete</a> </td>
+        </tr>
+    }
+
+</table>
+
+

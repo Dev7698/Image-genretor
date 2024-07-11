@@ -7,18 +7,17 @@
     </tr>
     <tr>
         <td>Name</td>
-        <td>Address</td>
+        <td>Email</td>
         <td>City</td>
-        <td>Gender</td>
-        <td>IsSelected</td>
+        <td>password</td>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.Name</td>
-            <td>@item.Address</td>
+            <td>@item.Email</td>
             <td>@item.City</td>
-            <td>@item.IsSelected</td>
+            <td>@item.password</td>
             <td> <a href="/Employee/Manage?id=@item.Id">Edit</a>|<a href="/Employee/Delete?id=@item.Id" onclick="return confirm('r u  delete ')">Delete</a> </td>
         </tr>
     }

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*video {
+            position: fixed;
+            margin: -10px;
+            margin-top: -3%;*/
+            /* margin-left: 0px; */
+        /*}*/
+
+        div {
+            position: relative;
+            color:black;
+        }
+
+        button {
+            border: 0px solid;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 5px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            background: purple;
+            background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) );
+            backdrop-filter: blur(0rem);
+            width: 20%;
+            height: 20%;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        }
+
+            button:hover {
+                background-color: rgb(46, 13, 77);
+                color: white;
+            }
+
+        .form {
+            background-color: black;
+            background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2) );
+            backdrop-filter: blur(0.5rem);
+            width: 30%;
+            height: 65%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5rem;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        }
+
+        ::placeholder {
+            color: violet;
+            opacity: 0.8; /* Firefox */
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+        <div class="form">
+            <form border="30px" method="post" id="form">
+                <center>
+                    <h2>Registration Form</h2>
+                </center>
+                <br>
+                <label style="font-size: large;">Name : </label><input type="text" name="name" placeholder="Enter your name" required> <br>
+                <br>
+                <label style="font-size: large;">Branch : </label><input type="text" name="barnch" placeholder="Enter your Branch name" required> <br>
+                <br>
+                <label style="font-size: large;">Email : </label><input type="text" name="emai" placeholder="Enter your Email" required> <br>
+                <br>
+                <label style="font-size: large;">Password : </label><input type="password" name="pwd" placeholder="Enter your password" required> <br>
+                <br>
+                <label style="font-size: large;">Enrollment Number : </label><input type="text" name="en_num" placeholder="Enter your En.Number" required> <br>
+                <br>
+                <label style="font-size: large;">Address : </label><textarea placeholder="Enter your Home Address"></textarea><br>
+                <br>
+                <label style="font-size: large;">Male</label><input type="radio" name="gender" value="Male">
+                <label style="font-size: large;">female</label><input type="radio" name="gender" value="female">
+                <br>
+                <br>
+                <label style="font-size: large;">Hobbie : </label>
+                <input type="checkbox" name="hobbie" value="webdev"><label>Webdevelopment</label>
+                <input type="checkbox" name="hobbie" value="Hacking"><label>Hacking</label>
+                <input type="checkbox" name="hobbie" value="singing"><label>Singing</label>
+                <br>
+                <br>
+                <center>
+                    <button type="submit" value="submit" name="submit"><h3>Submit</h3></button>
+                    <button type="reset" value="Reset" name="Reset"><h3>Reset</h3></button>
+                </center>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

@@ -44,7 +44,7 @@ namespace CroudeDemoMvc.Controllers
             {
                 fullPath = "/Images/default.jpg" + photos.Photo; // Path to the default image
             }
-
+        
             html = html.Replace("{image}", fullPath);
 
             TempData["BodyContent"] = html;
